@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
 
         // listagem de viagens
+
+
+        
         this.criarViagens();
 
 
