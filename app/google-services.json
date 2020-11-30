@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "910158078393",
+    "firebase_url": "https://projeto-rota-4b4c0.firebaseio.com",
+    "project_id": "projeto-rota-4b4c0",
+    "storage_bucket": "projeto-rota-4b4c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910158078393:android:277235e005fe6dfa249668",
+        "android_client_info": {
+          "package_name": "com.example.rota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910158078393-2jng1bskkvonmaqi40vkh8lfheth2sdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rota",
+            "certificate_hash": "5a351d84b0062d6f2d67f004f0b84b0b55571c66"
+          }
+        },
+        {
+          "client_id": "910158078393-ps63fo73c8m86dg1t4pqjggp0flo250c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf0UX6QGQE5PruFKVftF27V8iy-0AZaVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910158078393-ps63fo73c8m86dg1t4pqjggp0flo250c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

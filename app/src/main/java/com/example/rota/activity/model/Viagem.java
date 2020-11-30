@@ -1,22 +1,34 @@
 package com.example.rota.activity.model;
 
 public class Viagem {
-    private String viagem;
+    private String origem;
+    private String destino;
     private String veiculo;
     private String data;
 
-    public Viagem(String viagem, String veiculo, String data) {
-        this.viagem = viagem;
+    public Viagem(String origem, String destino, String veiculo, String data) {
+        this.origem = origem;
+        this.destino = destino;
         this.veiculo = veiculo;
         this.data = data;
     }
 
-    public String getViagem() {
-        return viagem;
+    public Viagem() {};
+
+    public String getOrigem() {
+        return origem;
     }
 
-    public void setViagem(String viagem) {
-        this.viagem = viagem;
+    public void setOrigem(String origem) {
+        this.origem = origem;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
     }
 
     public String getVeiculo() {
@@ -27,9 +39,7 @@ public class Viagem {
         this.veiculo = veiculo;
     }
 
-    public String getData() {
-        return data;
-    }
+    public String getData() { return data; }
 
     public void setData(String data) {
         this.data = data;

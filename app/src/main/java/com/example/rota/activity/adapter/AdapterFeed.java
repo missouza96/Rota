@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +12,7 @@ import com.example.rota.activity.model.Viagem;
 
 import java.util.List;
 
-public class AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> {
+public class  AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> {
 
     private List<Viagem> listaViagens;
 
@@ -32,14 +31,14 @@ public class AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+        final Viagem viagem = listaViagens.get(i);
 
-        Viagem viagem = listaViagens.get(i);
-
-        myViewHolder.viagem.setText(viagem.getViagem());
+        myViewHolder.origem.setText(viagem.getOrigem());
+        myViewHolder.destino.setText(viagem.getDestino());
         myViewHolder.veiculo.setText(viagem.getVeiculo());
         myViewHolder.data.setText(viagem.getData());
-
     }
+
 
     @Override
     public int getItemCount() {
@@ -48,14 +47,17 @@ public class AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView viagem;
+        TextView origem;
+        TextView destino;
         TextView veiculo;
         TextView data;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            viagem = itemView.findViewById(R.id.textViagem);
+            origem = itemView.findViewById(R.id.textOrigem);
+            destino = itemView.findViewById(R.id.textDestino);
             veiculo = itemView.findViewById(R.id.textVeiculo);
             data = itemView.findViewById(R.id.textData);
         }

@@ -1,3 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Rota</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">entrar</string>
+    <string name="n_o_possui_login_cadastre_se_abaixo">Não possui login? Cadastre-se abaixo</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="nome">Nome</string>
+    <string name="cadastrar">cadastrar</string>
+    <string name="fazer_login">Fazer login</string>
 </resources>
