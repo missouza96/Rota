@@ -42,10 +42,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //cadastro de usuário
-        //usuario.createUserWithEmailAndPassword("");
-
-         /*//firebase - salvando dados
+        /*cadastro de usuário
+        usuario.createUserWithEmailAndPassword("");
+        firebase - salvando dados
         DatabaseReference viagens = referencia.child("viagens");
 
         //firebase - recuperando dados
@@ -72,12 +71,6 @@ public class MainActivity extends AppCompatActivity {
         listaViagens.add(viagem);
 
         viagens.child("001").setValue(viagem);*/
-
-
-
-
-
-
 
 
         //buscar id

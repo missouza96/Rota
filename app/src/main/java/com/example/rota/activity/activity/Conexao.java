@@ -1,17 +1,16 @@
 package com.example.rota.activity.activity;
 
 import androidx.annotation.NonNull;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Conexao {
-    private static FirebaseAuth firebaseAuth;
-    private static FirebaseAuth.AuthStateListener authStateListener;
-    private static FirebaseUser firebaseUser;
+    public class Conexao {
+        private static FirebaseAuth firebaseAuth;
+        private static FirebaseAuth.AuthStateListener authStateListener;
+        private static FirebaseUser firebaseUser;
 
-    public Conexao() {
-    }
+        public Conexao() {
+        }
 
     public static FirebaseAuth getFirebaseAuth() {
         if(firebaseAuth == null){
@@ -38,7 +37,7 @@ public class Conexao {
         return firebaseUser;
     }
 
-    public void logout(){
+    public static void logOut(){
         firebaseAuth.signOut();
     }
 }
