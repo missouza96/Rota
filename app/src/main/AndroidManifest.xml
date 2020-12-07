@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".activity.activity.CadastroGasto"/>
+        <activity android:name=".activity.activity.CadastroViagem"/>
         <activity android:name=".activity.activity.CadastroUsuario"/>
         <activity android:name=".activity.activity.MainActivity"/>
         <activity android:name=".activity.activity.Perfil"/>
