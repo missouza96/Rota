@@ -1,12 +1,16 @@
 package com.example.rota.activity.activity;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.rota.R;
@@ -16,18 +20,22 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firestore.v1.Value;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
-    private FirebaseAuth usuario = FirebaseAuth.getInstance();
+
     private RecyclerView recyclerView;
-    private List<Viagem> listaViagens = new ArrayList<>();
     public FloatingActionButton fab;
+    public Button deleteViagem;
     public static final String VIAGENS = "viagens";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         eventosClick();
 
         //configura adapter
-        AdapterFeed adapterFeed = new AdapterFeed();
+        final AdapterFeed adapterFeed = new AdapterFeed();
         recyclerView.setAdapter(adapterFeed);
 
         // configurar RecyclerView
@@ -46,7 +54,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(this,LinearLayout.VERTICAL));
         recyclerView.setAdapter(adapterFeed);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection(VIAGENS).addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                adapterFeed.update(value.toObjects(Viagem.class));
+            }
+        });
     }
+
+
     private void eventosClick() {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
     public void componentesTela() {

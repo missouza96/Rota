@@ -8,12 +8,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.rota.R;
 import com.example.rota.activity.model.Viagem;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> {
 
     private List<Viagem> listaViagens;
-
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -26,7 +27,7 @@ public class AdapterFeed extends RecyclerView.Adapter<AdapterFeed.MyViewHolder> 
     }
     @Override
     public int getItemCount() {
-        return 0;
+        return null!=listaViagens?listaViagens.size():0;
     }
 
     public void update(List<Viagem> toObjects){

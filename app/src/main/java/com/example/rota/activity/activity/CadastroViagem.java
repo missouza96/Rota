@@ -46,5 +46,12 @@ public class CadastroViagem extends AppCompatActivity {
             }
         });
 
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 }

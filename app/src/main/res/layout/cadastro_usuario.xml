@@ -39,6 +39,7 @@
 
     <Button
         android:id="@+id/buttonCadastrarUsuario"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -51,28 +52,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ACTextViewCriarSenha" />
 
-    <TextView
-        android:id="@+id/textViewInfo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/fazer_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarUsuario" />
-
     <Button
         android:id="@+id/buttonIrLogin"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="Fazer Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewInfo2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarUsuario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
